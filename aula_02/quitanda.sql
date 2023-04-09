@@ -4,7 +4,7 @@ CREATE DATABASE db_quitanda;
 -- Query para deletar banco de dados
 DROP DATABASE db_quitanda;
 
--- Começar utilizar banco
+-- Começar utilizar banco 
 USE db_quitanda;
 
 -- Criar tabela e popular
@@ -16,9 +16,6 @@ preco decimal not null,
 primary key (id)
 );
 
--- Visualizar a tabela
-SELECT * FROM tb_produtos;
-
 -- Popular tabela
 INSERT INTO tb_produtos(nome, quantidade, preco)
 values("laranja", 50, 10.00);
@@ -28,6 +25,9 @@ INSERT INTO tb_produtos(nome, quantidade, preco)
 values("uva", 1200, 30.00);
 INSERT INTO tb_produtos(nome, quantidade, preco)
 values("pêra", 500, 2.00);
+
+-- Visualizar a tabela
+SELECT * FROM tb_produtos;
 
 -- buscas específicas
 SELECT nome, quantidade FROM tb_produtos;
@@ -52,12 +52,4 @@ ALTER TABLE tb_produtos ADD descrição varchar (255);
 ALTER TABLE tb_produtos DROP descricao;
 
 ALTER TABLE tb_produtos CHANGE nome nomedoproduto varchar(255);
-
-
-
-
-
-
-
-
 
